@@ -75,7 +75,6 @@
 #' @importFrom utils packageVersion
 .onAttach <- function(libname, pkgname){
 
-  if (is.na(localeToCharset())) Sys.setlocale("LC_CTYPE", "en_US.UTF-8")
   if (Sys.getlocale() == "C"){
     if (Sys.info()["sysname"] == "Darwin"){
       packageStartupMessage(
